@@ -1,19 +1,50 @@
+English | [日本語](ja/README.md) | [한국어](ko/README.md)
+
 # python-text-stats
 
-テキストファイルを読み込み、行数・単語数・文字数・頻出単語トップ10を表示するツールです。日本語テキストにも対応しています。
+![Python](https://img.shields.io/badge/Python-3776AB?logo=python&logoColor=white)
+![License](https://img.shields.io/badge/License-MIT-green.svg)
 
-## 必要環境
+## Overview
 
-- Python 3.6 以上
+A tool that reads text files and displays the number of lines, words, and characters, along with the top 10 most frequent words. It also supports Japanese text.
 
-## 使い方
+## Demo
+
+![Demo](docs/demo.png)
+
+*Actual output. The CLI interface is in Japanese.*
+
+## Features
+
+- Display line, word, and character counts
+- Display the top 10 most frequent words
+- Supports Japanese text
+- Analyze multiple files at once
+
+## Requirements
+
+- Python 3.6 or higher
+
+## Quick Start
 
 ```bash
+git clone https://github.com/mivork/python-text-stats.git
+cd python-text-stats
 python main.py sample.txt
 python main.py a.txt b.txt
 ```
 
-## 出力例
+## Usage
+
+| Command | Description |
+|---|---|
+| `python main.py <file>` | Analyze a single file |
+| `python main.py <file1> <file2>` | Analyze multiple files at once |
+
+## Example Output
+
+The program prints its results in Japanese, as shown below.
 
 ```
 ファイル: sample.txt
@@ -26,6 +57,14 @@ python main.py a.txt b.txt
    2. world                 2 回  ##
 ```
 
-## 単語の判定
+## Data Format
 
-英数字の連続と、ひらがな・カタカナ・漢字の連続をそれぞれ1単語として数えます。
+This tool does not save data to a file. It reads the specified text file and prints the analysis results to standard output.
+
+### Word Detection
+
+A sequence of alphanumeric characters counts as one word. A sequence of hiragana, katakana, or kanji characters also counts as one word.
+
+## License
+
+This project is licensed under the MIT License.
